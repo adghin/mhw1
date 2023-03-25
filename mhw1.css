@@ -1,0 +1,277 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Libre Baskerville', serif;
+	background-color: #f5f5f7;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	height: 10vh;
+	background-color: rgba(6, 15, 34, 0.8);
+	z-index: 2;
+}
+
+#logo {
+	font-family: 'Charm', sans-serif, cursive;	
+	font-size: 2em;
+	color: white;
+}
+
+#mobile-menu {
+	display: none;
+}
+
+nav div a {
+	padding: 10px;
+}
+	
+a {
+	text-decoration: none;
+	color: white;
+	font-size: 1em;
+	letter-spacing: 1.5px;
+}
+
+a:hover {
+	cursor: pointer;
+	color: rgb(153 121 91);
+	transition: .2s ease-in-out;
+	-webkit-transition: .2s ease-in-out;
+	-moz-transition: .2s ease-in-out;
+	-o-transition: .2s ease-in-out;
+	-ms-transition: .2s ease-in-out;
+}
+
+header {
+	height: 500px;
+	position: relative;
+	background-image: url(header.jpg);
+	background-size: cover;
+}
+
+#overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#header-container {
+	width: 780px;
+	text-align: center;
+	position: relative;
+	top: 50%;
+	margin: 0 auto;
+}
+
+#header-container h1,h4 {
+	padding: 10px;
+	color: white;
+	font-weight: 100;
+}
+
+section {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+#circle {
+	width: 100px;
+	height: 100px;
+	border: 2px solid white;
+	border-radius: 100px;
+	background-color: white;
+	background-image: url(cat-icon.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-top: -50px;
+	z-index: 1;
+}
+
+.checked {
+	color: orange;
+}
+
+#underline {
+	width: 300px;
+	height: 0.5px;
+	background-color: lightgray;
+	border-radius: 10px;
+}
+
+#section-flex-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 60px;
+	width: 66.67%;
+}
+
+.flex-item {
+	display: flex;	 
+	padding: 15px;
+	border-bottom: 1px solid lightgray;
+}
+
+.flex-item h3 {
+	margin-top: 25px;
+}
+
+.zero-child-item h4 {
+	color: lightgray;
+	padding-top: 25px;
+	font-size: 2em;
+}
+
+.first-child-item {
+	width: 33.33%;
+}
+
+.second-child-item {
+	width: 66.67%;
+}
+
+.flex-item div img {
+	width: 180px;
+	height: 280px;
+	object-fit: cover;
+	display: block;
+	margin: auto;
+	padding: 25px;
+}
+
+.flex-item p {
+	text-align: justify;
+	color: #806e6e;
+	font-size: 0.9rem;
+	line-height: 25px;
+	margin-top: 20px;
+}
+
+.flex-item a {
+	color: #424245;
+	font-weight: bold;	
+	font-style: italic;
+	display: block;
+	margin-top: 20px;
+}
+
+.flex-item div a:hover {
+	text-decoration: underline;
+	opacity: 0.7;
+	color: #424245;
+}
+
+footer {
+	height: 5vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	background-color: #434344;
+	margin-top: 80px;
+	color: #f5f5f7;
+}	
+
+footer span {
+	font-size: 0.7em;	
+	margin-left: 5%;
+	margin-right: 2%;
+}
+
+footer div {
+	width: 68%;
+}
+
+.footer-info {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;	
+}	
+
+@media (max-width: 1100px) {
+	.flex-item {
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.zero-child-item {
+		text-align: center;
+	}
+
+	.first-child-item {
+		width: 100%;
+	}
+
+	.second-child-item {
+		width: 100%;
+	}
+}
+
+@media (max-width: 780px) {
+	#header-container {
+		width: 100%;
+	}
+
+	#header-container h1,h4 {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	nav div {
+		display: none;
+	}
+
+	#mobile-menu {
+		display: block;
+		width: 60px;
+		height: 60px;
+		background-image: url(menu-icon.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin-left: 40%;
+	}
+
+	footer {
+		height: 12vh;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	footer div {
+		width: 90%;
+	}
+}
+
+@media (max-width: 391px) {
+	#section-flex-container {
+		width: 75%;
+	}
+
+	#header-container {
+		top: 40%;
+	}
+
+	.flex-item div img {
+		width: 130px;
+		height: 230px;
+	}
+
+	#underline {
+		width: 270px;
+	}
+}
